@@ -20,37 +20,6 @@ function getSquare() {
 }
 
 
-
-
-// creiamo un ciclo per inserire i quadrati e i numeri
-button.addEventListener("click", function(){
-
-    content.innerHTML = '';
-
-    
-    
-    for (let i = 1; i <= 100; i++) {
-
-        let quadrati = getSquare();
-        quadrati.innerHTML = `<span> ${i} </span>`;
-        
-        content.appendChild(quadrati)
-
-        quadrati.addEventListener('click', function(){
-
-            quadrati.classList.toggle('clicked');
-            console.log(i)
-        });
-    }
-    
-
-
-
-
-})
-
-   
-
 let generatedNumber = [];
 
 function getRandomNumber(min,max) {
@@ -61,21 +30,62 @@ function getRandomNumber(min,max) {
 
 
 
+// creiamo un ciclo per inserire i quadrati e i numeri
+button.addEventListener("click", function(){
 
+    content.innerHTML = '';
 
-while (generatedNumber.length < 16){
-
-    let randomNumber = getRandomNumber(1,100);
-
-    if (!generatedNumber.includes(randomNumber)){
-        
-        generatedNumber.push(randomNumber)}
     
-}
+    for (let i = 1; i <= 100; i++) {
+
+        let quadrati = getSquare();
+        quadrati.innerHTML = `<span> ${i} </span>`;
+        
+        content.appendChild(quadrati)
+
+        quadrati.addEventListener('click', function(){
+            
+
+            quadrati.classList.toggle('clicked');
+            console.log(i)
+
+            if (quadrati.includes(generatedNumber)){
+
+                
+
+                quadrati.classList.toggle('bomb');
+        
+            }
+            
+        });
+        
+
+    }
+    
+   
+
+    while (generatedNumber.length < 16){
+
+        let randomNumber = getRandomNumber(1,100);
+    
+        if (!generatedNumber.includes(randomNumber)){
+            
+            generatedNumber.push(randomNumber)}
+        
+    }
+
+   
+    
+    console.log(generatedNumber) 
 
 
-// controllare se randomnumber è nell'array generatednumber
+})
 
-console.log(generatedNumber)
+
+
+
+
+
+
 
 

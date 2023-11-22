@@ -31,6 +31,10 @@
 
 }
 
+.bomb {
+background-color: red;
+}
+
 
 .square {
     width: calc(100% / 10);
