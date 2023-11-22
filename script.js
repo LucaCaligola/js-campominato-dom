@@ -58,11 +58,13 @@ function getRandomNumber(min,max) {
     
 }
 
-let randomNumber = getRandomNumber(1,100);
 
 
 
-while (generatedNumber.lenght < 16){
+
+while (generatedNumber.length < 16){
+    
+    let randomNumber = getRandomNumber(1,100);
 
     if (!generatedNumber.includes(randomNumber)){
         
