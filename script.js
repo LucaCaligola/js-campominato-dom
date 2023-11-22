@@ -31,9 +31,6 @@ button.addEventListener("click", function(){
     
     for (let i = 1; i <= 100; i++) {
 
-        
-
-
         let quadrati = getSquare();
         quadrati.innerHTML = `<span> ${i} </span>`;
         
@@ -44,12 +41,38 @@ button.addEventListener("click", function(){
             quadrati.classList.toggle('clicked');
             console.log(i)
         });
-        
-
-        
     }
+
+
+
+
 })
 
+   
 
+let generatedNumber = [];
+
+function getRandomNumber(min,max) {
+    
+    return Math.floor(Math.random() * 100) + 1;
+    
+}
+
+let randomNumber = getRandomNumber(1,100);
+
+
+
+while (generatedNumber.lenght < 16){
+
+    if (!generatedNumber.includes(randomNumber)){
+        
+        generatedNumber.push(randomNumber)}
+    
+}
+
+
+// controllare se randomnumber è nell'array generatednumber
+
+console.log(generatedNumber)
 
 
