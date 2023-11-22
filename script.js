@@ -42,6 +42,7 @@ button.addEventListener("click", function(){
             console.log(i)
         });
     }
+    
 
 
 
@@ -63,7 +64,7 @@ function getRandomNumber(min,max) {
 
 
 while (generatedNumber.length < 16){
-    
+
     let randomNumber = getRandomNumber(1,100);
 
     if (!generatedNumber.includes(randomNumber)){
